@@ -25,11 +25,15 @@ require 'db.php';
             echo "
             <li>
             <h4>" . $movie->getTitle() . "</h4>
-            <p> " . $movie->originalTitle . "</p>
-            <p> " . $movie->year . "</p>
-            <p> " . $movie->length . "</p>
-            <p> " . $movie->overview . "</p>
-            <p> " . $movie->director->getDirector() . "</p>            
+            <p> Titolo Originale: " . $movie->originalTitle . "</p>
+            <p> Data di uscita: " . $movie->year . "</p>
+            <p> Durata: " . $movie->length . "</p>";
+            foreach ($movie->genre as $genre) {
+                echo $genre . ", ";
+            }
+            echo "
+            <p> Trama: " . $movie->overview . "</p>
+            <p> Diretto da: " . $movie->director->getDirector() . "</p>            
             </li>";
         }
         ?>

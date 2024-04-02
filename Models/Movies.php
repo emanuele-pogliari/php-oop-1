@@ -7,6 +7,8 @@ class Movie
     public $length;
     public $overview;
 
+    public $genre = [];
+
     public $director;
 
     /**
@@ -17,16 +19,18 @@ class Movie
      * @param string $_year
      * @param string $_length
      * @param string $_overview
+     * @param string $_genre
      */
 
     // constructor function
-    function __construct($_title, $_originalTitle, $_year, $_length, $_overview)
+    function __construct($_title, $_originalTitle, $_year, $_length, $_overview, $_genre = [])
     {
         $this->title = $_title;
         $this->originalTitle = $_originalTitle;
         $this->year = $_year;
         $this->length = $_length;
         $this->overview = $_overview;
+        $this->genre = $_genre;
     }
 
     // method that returns the title of the movie
