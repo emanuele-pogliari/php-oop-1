@@ -15,6 +15,6 @@ class Director
 
     public function getDirector()
     {
-        return $this->directorName . " " . $this->directorLastname . " <br> " . "Nationality: " . $this->directorNationality;
+        return $this->directorName . " " . $this->directorLastname . " <br> " . "<span class='fs-5 fw-bold '>Nationality: </span>" . $this->directorNationality;
     }
 }

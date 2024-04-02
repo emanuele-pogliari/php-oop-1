@@ -37,7 +37,7 @@ require 'db.php';
                 }
                 echo "</p>
             <p> <span class=' fs-5 fw-bold'>Trama: </span>" . $movie->overview . "</p>
-            <p> Diretto da: " . $movie->director->getDirector() . "</p>       
+            <p> <span class=' fs-5 fw-bold'>Diretto da: </span>" . $movie->director->getDirector() . "</p>       
             </div>
             </div>";
             }
