@@ -29,6 +29,7 @@ require 'db.php';
             <p> " . $movie->year . "</p>
             <p> " . $movie->length . "</p>
             <p> " . $movie->overview . "</p>
+            <p> " . $movie->director->getDirector() . "</p>            
             </li>";
         }
         ?>

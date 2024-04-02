@@ -7,6 +7,8 @@ class Movie
     public $length;
     public $overview;
 
+    public $director;
+
     /**
      * __construct
      *
