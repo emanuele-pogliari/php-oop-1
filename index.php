@@ -6,35 +6,39 @@ require 'db.php';
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <title>PHP Oop</title>
 </head>
 
 <body>
-    <h1>PHP Oop</h1>
+
     <div class="container">
-        <div class="row">
+        <h1 class="text-center m-5">Programmazione orientata agli oggetti</h1>
+        <div class="row justify-content-around">
             <?php
             foreach ($movies as $movie) {
                 echo "
-                <div class='card col-3 p-0 m-3'>
+                <div class='card col-4 mb-5 border-0'>
                 <img src=" . $movie->poster . ">
-                <h4 class='text-danger'>" . $movie->getTitle() . "</h4>
-                <p> Titolo Originale: " . $movie->originalTitle . "</p>
-                <p> Data di uscita: " . $movie->year . "</p>
-                <p> Durata: " . $movie->length . "</p>";
-
+                <div class='card-body'>
+                <h4 class=' fs-3 fw-bold'>" . $movie->getTitle() . "</h4>
+                <p> <span class=' fs-4 fw-bold'> Titolo Originale: </span>" . $movie->originalTitle . "</p>
+                <p class=' fs-5 fw-bold'> Data di uscita: " . $movie->year . "</p>
+                <p class=' fs-5 fw-bold'> Durata: " . $movie->length . "</p>
+                <p> <span class=' fs-5 fw-bold'>Generi: </span>";
                 foreach ($movie->genre as $genre) {
-                    echo "Generi: " . $genre . ", ";
+                    echo $genre . ", ";
                 }
-                echo "
-            <p> Trama: " . $movie->overview . "</p>
+                echo "</p>
+            <p> <span class=' fs-5 fw-bold'>Trama: </span>" . $movie->overview . "</p>
             <p> Diretto da: " . $movie->director->getDirector() . "</p>       
+            </div>
             </div>";
             }
             ?>

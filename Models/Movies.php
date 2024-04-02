@@ -39,6 +39,6 @@ class Movie
     // method that returns the title of the movie
     public function getTitle()
     {
-        return $this->title . ":";
+        return $this->title;
     }
 }
