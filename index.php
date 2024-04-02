@@ -24,7 +24,7 @@ require 'db.php';
             <?php
             foreach ($movies as $movie) {
                 echo "
-                <div class='card col-4 mb-5 border-0'>
+                <div class='card col-12 col-md-6 col-lg-4 mb-5 border-0'>
                 <img src=" . $movie->poster . ">
                 <div class='card-body'>
                 <h4 class=' fs-3 fw-bold'>" . $movie->getTitle() . "</h4>
